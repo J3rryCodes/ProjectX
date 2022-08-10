@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://Player/Head.gd" type="Script" id=2]
 [ext_resource path="res://Player/WeponHolder.gd" type="Script" id=3]
+[ext_resource path="res://Player/crosshair.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -31,3 +32,9 @@ script = ExtResource( 3 )
 [node name="RayCast" type="RayCast" parent="Head/Camera/WeponHolder"]
 cast_to = Vector3( 0, 0, -100 )
 debug_shape_custom_color = Color( 1, 0, 0, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Head"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )

@@ -2,11 +2,21 @@ extends Spatial
 
 export var mouse_sensitivity = 0.3
 onready var camera = $Camera
+onready var crosshair = $TextureRect
 
 var camera_x_rotation = 0
+var crosshair_size = 40
 
 func _init():
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	
+func _ready():
+	
+	var display_size = OS.window_size
+	var half_crosshair = (crosshair.rect_size.x * crosshair.rect_scale.x) * 0.5
+	crosshair.set_position(Vector2((display_size.x/2)+half_crosshair,(display_size.y/2)+half_crosshair))
 
 func _input(event):
 	
