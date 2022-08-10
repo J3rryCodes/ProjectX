@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Environment/floor.jpg" type="Texture" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
 
 [node name="Ground" type="Spatial"]
 
@@ -17,6 +20,3 @@ shape = SubResource( 1 )
 [node name="CSGMesh" type="CSGMesh" parent="StaticBody/CollisionShape"]
 mesh = SubResource( 2 )
 material = SubResource( 3 )
-
-[node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.562528, 1.47433, -15.8921 )

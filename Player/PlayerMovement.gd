@@ -17,8 +17,6 @@ func _physics_process(delta):
 	var direction = Vector3.ZERO
 	var head_basics = head.global_transform.basis
 	
-	print(head_basics.x)
-	
 	if Input.is_action_pressed("fwd"):
 		direction -= head_basics.z
 	elif Input.is_action_pressed("bwd"):
