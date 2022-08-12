@@ -36,7 +36,7 @@ cast_to = Vector3( 0, 0, -100 )
 debug_shape_custom_color = Color( 1, 0, 0, 1 )
 
 [node name="Mark21" parent="Head/Camera/WeponHolder" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0, -1, 0 )
+transform = Transform( -0.7, 6.11959e-08, -6.11959e-08, 6.11959e-08, 0.7, 0, 6.11959e-08, -5.34992e-15, -0.7, 0, -1.11112, -0.165 )
 
 [node name="TextureRect" type="TextureRect" parent="Head"]
 margin_right = 40.0
